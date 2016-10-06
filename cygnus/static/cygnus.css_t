@@ -139,6 +139,12 @@ pre {
     line-height: 150%;
 }
 
+@media screen and (max-width: 750px) {
+    pre {
+        padding: 10px 10px;
+    }
+}
+
 div.document, div.footer {
     width: 750px;
     padding: 0;
