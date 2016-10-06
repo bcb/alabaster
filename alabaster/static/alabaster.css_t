@@ -54,215 +54,123 @@
 
 /* -- page layout ----------------------------------------------------------- */
 
-body {
-    font-family: {{ theme_font_family }};
-    font-size: {{ theme_font_size }};
-    background-color: {{ theme_base_bg }};
-    color: {{ theme_base_text }};
+/* Reset some basic elements */
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
     margin: 0;
     padding: 0;
+    line-height: 100%;
 }
 
-
-div.document {
-    width: {{ theme_page_width }};
-    margin: 30px auto 0 auto;
+/* Basic styling */
+body {
+    background-color: white;
+    color: #3E4349;
+    font-family: 'goudy old style', 'minion pro', 'bell mt', Georgia, 'Hiragino Mincho Pro', serif;
+    font-size: 19px;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-div.documentwrapper {
-    float: left;
-    width: 100%;
-}
-
-div.bodywrapper {
-    margin: 0 0 0 {{ theme_sidebar_width }};
-}
-
-div.sphinxsidebar {
-    width: {{ theme_sidebar_width }};
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-hr {
-    border: 1px solid {{ theme_hr_border }};
-}
-
-div.body {
-    background-color: {{ theme_body_bg  }};
-    color: {{ theme_body_text }};
-    padding: 0 30px 0 30px;
-}
-
-div.body > .section {
-    text-align: {{ theme_body_text_align }};
-}
-
-div.footer {
-    width: {{ theme_page_width }};
-    margin: 20px auto 30px auto;
-    font-size: 14px;
-    color: {{ theme_footer_text }};
-    text-align: right;
-}
-
-div.footer a {
-    color: {{ theme_footer_text }};
-}
-
-p.caption {
-    font-family: {{ theme_caption_font_family }};
-    font-size: {{ theme_caption_font_size }};
-}
-
-{% if theme_show_related|lower == 'false' %}
-div.relations {
-    display: none;
-}
-{% endif %}
-
-div.sphinxsidebar a {
-    color: {{ theme_sidebar_link }};
-    text-decoration: none;
-    border-bottom: 1px dotted {{ theme_sidebar_link_underscore }};
-}
-
-div.sphinxsidebar a:hover {
-    border-bottom: 1px solid {{ theme_sidebar_link_underscore }};
-}
-
-div.sphinxsidebarwrapper {
-    padding: 18px 10px;
-}
-
-div.sphinxsidebarwrapper p.logo {
-    padding: 0;
-    margin: -10px 0 0 0px;
-    text-align: center;
-}
-
-div.sphinxsidebarwrapper h1.logo {
-    margin-top: -10px;
-    text-align: center;
-    margin-bottom: 5px;
-    text-align: {{ theme_logo_text_align }};
-}
-
-div.sphinxsidebarwrapper h1.logo-name {
-    margin-top: 0px;
-}
-
-div.sphinxsidebarwrapper p.blurb {
-    margin-top: 0;
-    font-style: {{ theme_description_font_style }};
-}
-
-div.sphinxsidebar h3,
-div.sphinxsidebar h4 {
-    font-family: {{ theme_head_font_family }};
-    color: {{ theme_sidebar_header }};
-    font-size: 24px;
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', 'Garamond', 'Georgia', serif;
     font-weight: normal;
-    margin: 0 0 5px 0;
-    padding: 0;
+    color: #444;
 }
 
-div.sphinxsidebar h4 {
-    font-size: 20px;
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
-div.sphinxsidebar h3 a {
-    color: {{ theme_sidebar_link }};
+h2 {
+    margin: 30px 0 20px 0;
+    font-size: 1.2em;
 }
 
-div.sphinxsidebar p.logo a,
-div.sphinxsidebar h3 a,
-div.sphinxsidebar p.logo a:hover,
-div.sphinxsidebar h3 a:hover {
-    border: none;
-}
-
-div.sphinxsidebar p {
-    color: {{ theme_sidebar_text }};
-    margin: 10px 0;
-}
-
-div.sphinxsidebar ul {
-    margin: 10px 0;
-    padding: 0;
-    color: {{ theme_sidebar_list }};
-}
-
-div.sphinxsidebar ul li.toctree-l1 > a {
-    font-size: 120%;
-}
-
-div.sphinxsidebar ul li.toctree-l2 > a {
-    font-size: 110%;
-}
-
-div.sphinxsidebar input {
-    border: 1px solid {{ theme_sidebar_search_button }};
-    font-family: {{ theme_font_family }};
+h3 {
+    margin: 20px 0 20px 0;
     font-size: 1em;
 }
 
-div.sphinxsidebar hr {
+/* Stop headings from appearing as links when 'contents' is used */
+h2 a, h2 a:hover,
+h3 a, h3 a:hover {
+    color: inherit;
+    text-decoration: none;
     border: none;
-    height: 1px;
-    color: {{ theme_sidebar_hr }};
-    background: {{ theme_sidebar_hr }};
-
-    text-align: left;
-    margin-left: 0;
-    width: 50%;
 }
 
-/* -- body styles ----------------------------------------------------------- */
-
-a {
-    color: {{ theme_link }};
-    text-decoration: underline;
+a, a:hover, a:visited {
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px dotted;
 }
 
 a:hover {
-    color: {{ theme_link_hover }};
-    text-decoration: underline;
 }
 
-div.body h1,
-div.body h2,
-div.body h3,
-div.body h4,
-div.body h5,
-div.body h6 {
-    font-family: {{ theme_head_font_family }};
-    font-weight: normal;
-    margin: 30px 0px 10px 0px;
+p, blockquote, pre, ul, ol, figure, .exception {
+    margin-bottom: 20px;
+    line-height: 160%;
+}
+
+/* Lists */
+ul {
+    margin: 0px 0 10px 1.5em;
+}
+
+pre, code {
+    background-color: inherit;
+    font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    line-height: 140%;
+    font-size: 0.9em;
+}
+
+pre {
+    border-radius: 3px;
+    background-color: #eee;
+    overflow-x: auto;
+    padding: 10px 20px;
+    border: 0;
+    font-size: 0.8em;
+    line-height: 140%;
+}
+
+div.document, div.footer {
+    width: 750px;
     padding: 0;
+    margin: 0;
+    margin: auto;
 }
 
-div.body h1 { margin-top: 0; padding-top: 0; font-size: 240%; }
-div.body h2 { font-size: 180%; }
-div.body h3 { font-size: 150%; }
-div.body h4 { font-size: 130%; }
-div.body h5 { font-size: 100%; }
-div.body h6 { font-size: 100%; }
-
-a.headerlink {
-    color: {{ theme_anchor }};
-    padding: 0 4px;
-    text-decoration: none;
+div.body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
-a.headerlink:hover {
-    color: {{ theme_anchor_hover_fg }};
-    background: {{ theme_anchor_hover_bg }};
+@media screen and (max-width: 750px) {
+    div.document {
+        width: 100%;
+    }
+    div.documentwrapper {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }
 
-div.body p, div.body dd, div.body li {
-    line-height: 1.4em;
+div.footer {
+    display: none;
 }
+
+/* -- admonitions ----------------------------------------------------------- */
 
 div.admonition {
     margin: 20px 0px;
@@ -294,8 +202,12 @@ div.admonition p.last {
     margin-bottom: 0;
 }
 
-div.highlight {
-    background-color: {{ theme_code_highlight_bg }};
+p.admonition-title {
+    display: inline;
+}
+
+p.admonition-title:after {
+    content: ":";
 }
 
 dt:target, .highlight {
@@ -362,27 +274,11 @@ div.topic {
     background-color: {{ theme_topic_bg }};
 }
 
-p.admonition-title {
-    display: inline;
-}
-
-p.admonition-title:after {
-    content: ":";
-}
-
-pre, tt, code {
-    font-family: {{theme_code_font_family}};
-    font-size: {{ theme_code_font_size }};
-}
-
 .hll {
     background-color: {{theme_code_highlight}};
     margin: 0 -12px;
     padding: 0 12px;
     display: block;
-}
-
-img.screenshot {
 }
 
 tt.descname, tt.descclassname, code.descname, code.descclassname {
@@ -393,65 +289,6 @@ tt.descname, code.descname {
     padding-right: 0.08em;
 }
 
-img.screenshot {
-    -moz-box-shadow: 2px 2px 4px {{ theme_shadow }};
-    -webkit-box-shadow: 2px 2px 4px {{ theme_shadow }};
-    box-shadow: 2px 2px 4px {{ theme_shadow }};
-}
-
-table.docutils {
-    border: 1px solid {{ theme_table_border }};
-    -moz-box-shadow: 2px 2px 4px {{ theme_shadow }};
-    -webkit-box-shadow: 2px 2px 4px {{ theme_shadow }};
-    box-shadow: 2px 2px 4px {{ theme_shadow }};
-}
-
-table.docutils td, table.docutils th {
-    border: 1px solid {{ theme_table_border }};
-    padding: 0.25em 0.7em;
-}
-
-table.field-list, table.footnote {
-    border: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-table.footnote {
-    margin: 15px 0;
-    width: 100%;
-    border: 1px solid {{ theme_footnote_border }};
-    background: {{ theme_footnote_bg }};
-    font-size: 0.9em;
-}
-
-table.footnote + table.footnote {
-    margin-top: -15px;
-    border-top: none;
-}
-
-table.field-list th {
-    padding: 0 0.8em 0 0;
-}
-
-table.field-list td {
-    padding: 0;
-}
-
-table.field-list p {
-    margin-bottom: 0.8em;
-}
-
-table.footnote td.label {
-    width: .1px;
-    padding: 0.3em 0 0.3em 0.5em;
-}
-
-table.footnote td {
-    padding: 0.3em 0.5em;
-}
-
 dl {
     margin: 0;
     padding: 0;
@@ -459,28 +296,6 @@ dl {
 
 dl dd {
     margin-left: 30px;
-}
-
-blockquote {
-    margin: 0 0 0 30px;
-    padding: 0;
-}
-
-ul, ol {
-    /* Matches the 30px from the narrow-screen "li > ul" selector below */
-    margin: 10px 0 10px 30px;
-    padding: 0;
-}
-
-pre {
-    background: {{ theme_pre_bg }};
-    padding: 7px 30px;
-    margin: 15px 0px;
-    line-height: 1.3em;
-}
-
-div.viewcode-block:target {
-    background: {{ theme_viewcode_target_bg }};
 }
 
 dl pre, blockquote pre, li pre {
@@ -502,205 +317,4 @@ tt, code {
 tt.xref, code.xref, a tt {
     background-color: {{ theme_xref_bg }};
     border-bottom: 1px solid {{ theme_xref_border }};
-}
-
-a.reference {
-    text-decoration: none;
-    border-bottom: 1px dotted {{ theme_link }};
-}
-
-/* Don't put an underline on images */
-a.image-reference, a.image-reference:hover {
-    border-bottom: none;
-}
-
-a.reference:hover {
-    border-bottom: 1px solid {{ theme_link_hover }};
-}
-
-a.footnote-reference {
-    text-decoration: none;
-    font-size: 0.7em;
-    vertical-align: top;
-    border-bottom: 1px dotted {{ theme_link }};
-}
-
-a.footnote-reference:hover {
-    border-bottom: 1px solid {{ theme_link_hover }};
-}
-
-a:hover tt, a:hover code {
-    background: {{ theme_code_hover }};
-}
-
-
-@media screen and (max-width: 870px) {
-
-    div.sphinxsidebar {
-    	display: none;
-    }
-
-    div.document {
-       width: 100%;
-
-    }
-
-    div.documentwrapper {
-    	margin-left: 0;
-    	margin-top: 0;
-    	margin-right: 0;
-    	margin-bottom: 0;
-    }
-
-    div.bodywrapper {
-    	margin-top: 0;
-    	margin-right: 0;
-    	margin-bottom: 0;
-    	margin-left: 0;
-    }
-
-    ul {
-    	margin-left: 0;
-    }
-
-	li > ul {
-        /* Matches the 30px from the "ul, ol" selector above */
-		margin-left: 30px;
-	}
-
-    .document {
-    	width: auto;
-    }
-
-    .footer {
-    	width: auto;
-    }
-
-    .bodywrapper {
-    	margin: 0;
-    }
-
-    .footer {
-    	width: auto;
-    }
-
-    .github {
-        display: none;
-    }
-
-
-
-}
-
-
-
-@media screen and (max-width: 875px) {
-
-    body {
-        margin: 0;
-        padding: 20px 30px;
-    }
-
-    div.documentwrapper {
-        float: none;
-        background: {{ theme_base_bg }};
-    }
-
-    div.sphinxsidebar {
-        display: block;
-        float: none;
-        width: 102.5%;
-        {%- if theme_fixed_sidebar|lower == 'true' %}
-        margin: -20px -30px 20px -30px;
-        {%- else %}
-        margin: 50px -30px -20px -30px;
-        {%- endif %}
-        padding: 10px 20px;
-        background: {{ theme_narrow_sidebar_bg }};
-        color: {{ theme_narrow_sidebar_fg }};
-    }
-
-    div.sphinxsidebar h3, div.sphinxsidebar h4, div.sphinxsidebar p,
-    div.sphinxsidebar h3 a {
-        color: {{ theme_base_bg }};
-    }
-
-    div.sphinxsidebar a {
-        color: {{ theme_narrow_sidebar_link }};
-    }
-
-    div.sphinxsidebar p.logo {
-        display: none;
-    }
-
-    div.document {
-        width: 100%;
-        margin: 0;
-    }
-
-    div.footer {
-        display: none;
-    }
-
-    div.bodywrapper {
-        margin: 0;
-    }
-
-    div.body {
-        min-height: 0;
-        padding: 0;
-    }
-
-    .rtd_doc_footer {
-        display: none;
-    }
-
-    .document {
-        width: auto;
-    }
-
-    .footer {
-        width: auto;
-    }
-
-    .footer {
-        width: auto;
-    }
-
-    .github {
-        display: none;
-    }
-}
-
-{%- if theme_fixed_sidebar|lower == 'true' %}
-@media screen and (min-width: 876px) {
-    div.sphinxsidebar {
-        position: fixed;
-        margin-left: 0;
-    }
-}
-{%- endif %}
-
-
-/* misc. */
-
-.revsys-inline {
-    display: none!important;
-}
-
-/* Make nested-list/multi-paragraph items look better in Releases changelog
- * pages. Without this, docutils' magical list fuckery causes inconsistent
- * formatting between different release sub-lists.
- */
-div#changelog > div.section > ul > li > p:only-child {
-    margin-bottom: 0;
-}
-
-/* Hide fugly table cell borders in ..bibliography:: directive output */
-table.docutils.citation, table.docutils.citation td, table.docutils.citation th {
-  border: none;
-  /* Below needed in some edge cases; if not applied, bottom shadows appear */
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
 }
