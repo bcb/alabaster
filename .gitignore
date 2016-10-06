@@ -1,1 +1,3 @@
+.gitignore
 docs/_build
+alabaster.egg-info
