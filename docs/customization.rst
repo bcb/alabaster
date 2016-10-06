@@ -2,11 +2,11 @@
 Customization
 =============
 
-Alabaster's behavior & style can be customized in multiple ways:
+Cygnus's behavior & style can be customized in multiple ways:
 
 * Various template-level or nontrivial-style settings can be configured via
   your ``conf.py`` in ``html_theme_options``; see :ref:`theme-options`.
-* As of Alabaster 0.7.8, you can provide your own CSS stylesheet overrides via
+* As of Cygnus 0.7.8, you can provide your own CSS stylesheet overrides via
   a :ref:`custom stylesheet <custom-stylesheet>`. This is suitable for changes
   that only need minor CSS modifications.
 
@@ -21,7 +21,7 @@ Alabaster's behavior & style can be customized in multiple ways:
       whenever possible, even if an option is present below.
       
         * When in doubt, simply check `the built-in stylesheet's template
-          <https://github.com/bitprophet/alabaster/blob/master/alabaster/static/alabaster.css_t>`_
+          <https://github.com/bitprophet/cygnus/blob/master/cygnus/static/cygnus.css_t>`_
           to see whether the option you're looking at is a basic variable
           insertion or something more complicated.)
 
@@ -31,13 +31,13 @@ Alabaster's behavior & style can be customized in multiple ways:
 Custom stylesheet
 =================
 
-If you need to modify Alabaster's default CSS styles in a way not covered by
+If you need to modify Cygnus's default CSS styles in a way not covered by
 the theme options from the next section, you may provide a custom CSS
 stylesheet as follows:
 
 * Create a file named ``custom.css`` anywhere you prefer (typically
   ``_static/``, but this is solely convention) containing your desired
-  overrides to the CSS found in Alabaster's ``static/alabaster_css_t``.
+  overrides to the CSS found in Cygnus's ``static/cygnus_css_t``.
 * Set the core Sphinx option `html_static_path
   <http://www.sphinx-doc.org/en/stable/config.html#confval-html_static_path>`_
   to either that file's path, or the directory it lives within.
@@ -48,7 +48,7 @@ stylesheet as follows:
 Theme options
 =============
 
-Alabaster's primary configuration route is the ``html_theme_options`` variable,
+Cygnus's primary configuration route is the ``html_theme_options`` variable,
 set in ``conf.py`` alongside the rest, e.g.:
 
 .. code-block:: python
@@ -56,7 +56,7 @@ set in ``conf.py`` alongside the rest, e.g.:
     html_theme_options = {
         'logo': 'logo.png',
         'github_user': 'bitprophet',
-        'github_repo': 'alabaster',
+        'github_repo': 'cygnus',
     }
 
 The following subsections detail available such options, including notes about
@@ -145,7 +145,7 @@ Variables and feature toggles
    You can read more about this in the Sphinx toctree 
    `docs <http://www.sphinx-doc.org/en/stable/templating.html#toctree>`_.
 * ``show_powered_by``: Boolean controlling display of the ``Powered by
-  Sphinx N.N.N. & Alabaster M.M.M`` section of the footer. When ``true``, is
+  Sphinx N.N.N. & Cygnus M.M.M`` section of the footer. When ``true``, is
   displayed next to the copyright information; when ``false``, is hidden.
 * ``show_related``: Boolean controlling whether the 'next/previous/related'
   secondary navigation elements are hidden or displayed. Defaults to ``false``

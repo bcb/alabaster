@@ -1,3 +1,3 @@
 .gitignore
 docs/_build
-alabaster.egg-info
+cygnus.egg-info

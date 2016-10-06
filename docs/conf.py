@@ -6,13 +6,13 @@ templates_path = ['_templates']
 source_suffix = '.rst'
 master_doc = 'index'
 
-project = u'Alabaster'
+project = u'Cygnus'
 year = datetime.now().year
 copyright = u'%d Jeff Forcier' % year
 
 exclude_patterns = ['_build']
 
-html_theme = 'alabaster'
+html_theme = 'cygnus'
 html_sidebars = {
     '**': [
         'about.html',
@@ -25,11 +25,11 @@ html_sidebars = {
 html_theme_options = {
     'description': "A light, configurable Sphinx theme",
     'github_user': 'bitprophet',
-    'github_repo': 'alabaster',
+    'github_repo': 'cygnus',
     'fixed_sidebar': True,
 }
 
 extensions.append('releases')
-releases_github_path = 'bitprophet/alabaster'
+releases_github_path = 'bitprophet/cygnus'
 # Our pre-0.x releases are unstable / mix bugs+features
 releases_unstable_prehistory = True
