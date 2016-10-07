@@ -167,3 +167,7 @@ a.headerlink {
 a:hover.headerlink {
     color: black;
 }
+
+.doc {
+    font-style: italic;
+}
