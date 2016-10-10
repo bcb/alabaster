@@ -43,12 +43,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #444;
 }
 
-.rubric {
-    font-family: 'georgia';
-    font-style: italic;
-    font-weight: bold;
-}
-
 h1 {
     margin-bottom: 20px;
     font-size: 180%;
@@ -170,4 +164,10 @@ a:hover.headerlink {
 
 .doc {
     font-style: italic;
+}
+
+.rubric {
+    font-family: 'georgia';
+    font-style: italic;
+    font-weight: bold;
 }
