@@ -103,8 +103,21 @@ pre, code, dl {
     font-family: 'Droid Sans Mono', monospace;
 }
 
+dd, dl, dt {
+    line-height: 140%;
+}
+
+dl.exception, dl.data {
+  margin-bottom: 20px;
+}
+
+dd p {
+    margin-bottom: 0px;
+}
+
 dt code {
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 pre {
